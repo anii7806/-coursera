@@ -46,7 +46,7 @@
             },
             {
                 name: "Cheese Bread",
-                quantity: "4"
+                quantity: "4",
             }
         
         ];
