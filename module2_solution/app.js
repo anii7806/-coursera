@@ -43,10 +43,6 @@
             {
                 name: "Chocolate",
                 quantity: "5",
-            },
-            {
-                name: "Cheese Bread",
-                quantity: "4"
             }
         
         ];
