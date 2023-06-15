@@ -46,13 +46,18 @@
                     Favorite dish is required.
                   </small>
                 </div>
-                <div ng-show="favoriteDishError" style="color: red;">
-                  {{ favoriteDishError }}
+                <div ng-show="favoriteDishError">
+                  <small style="color: red;">
+                    {{ favoriteDishError }}
+                  </small>
                 </div>
               </div>
               
             <div style="display: flex; justify-content: center; width: 100%;">
                 <button type="submit" class="btn btn-primary" ng-disabled="signupForm.$invalid" ng-click="submitForm()">Submit</button>
+            </div>
+            <div ng-if="isValid" style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
+                <p class="text-success" style="font-weight: 600;">Registration Successfully</p>
             </div>
         </form>
     </div>

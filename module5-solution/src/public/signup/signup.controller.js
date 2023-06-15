@@ -7,7 +7,9 @@
     SignupController.$inject = ['$scope', '$http', 'UserService'];
     function SignupController($scope, $http, UserService) {
       $scope.submitForm = function () {
+        $scope.isValid = false;
         if ($scope.signupForm.$valid) {
+          
           var user = {
             firstname: $scope.user.firstname,
             lastname: $scope.user.lastname,
@@ -27,6 +29,7 @@
               if (response.data === null) {
                 $scope.favoriteDishError = 'No such menu number exists';
               } else {
+                $scope.isValid = true;
                 UserService.setUser(user);
                 $scope.favoriteDishError = null;
   
