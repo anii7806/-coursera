@@ -31,10 +31,10 @@
             </div>
             <div style="margin-bottom: 15px;">
                 <label>Contact Number</label>
-                <input type="number" class="form-control" name="contact" ng-model="user.contact" ng-required="true" />
+                <input type="number" class="form-control" name="contact" ng-minlength="11" ng-maxlength="11" ng-model="user.contact" ng-required="true" />
                 <div ng-show="signupForm.contact.$touched && signupForm.contact.$invalid">
                     <small style="color: red;">
-                        Contact number is required
+                        Contact number is required and must have 11 digits
                     </small>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                 <button type="submit" class="btn btn-primary" ng-disabled="signupForm.$invalid" ng-click="submitForm()">Submit</button>
             </div>
             <div ng-if="isValid" style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
-                <p class="text-success" style="font-weight: 600;">Registration Successfully</p>
+                <p class="text-success" style="font-weight: 600;">Registered Successfully!</p>
             </div>
         </form>
     </div>
